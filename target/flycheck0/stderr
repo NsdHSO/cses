@@ -1,12 +1,50 @@
-   0.010821500s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint: stale: changed "/Volumes/Working/rust/practice/cses/src/bin/weird_algo.rs"
-   0.010833917s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint:           (vs) "/Volumes/Working/rust/practice/cses/target/debug/.fingerprint/cses-8b732f846740f23c/dep-bin-weird_algo"
-   0.010836708s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1789362699, nanos: 499440243 } < FileTime { seconds: 1789362700, nanos: 410065444 }
-   0.010912917s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint: fingerprint dirty for cses v0.1.0 (/Volumes/Working/rust/practice/cses)/Check { test: false }/TargetInner { name: "weird_algo", doc: true, ..: with_path("/Volumes/Working/rust/practice/cses/src/bin/weird_algo.rs", Edition2021) }
-   0.010924792s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/Volumes/Working/rust/practice/cses/target/debug/.fingerprint/cses-8b732f846740f23c/dep-bin-weird_algo", reference_mtime: FileTime { seconds: 1789362699, nanos: 499440243 }, stale: "/Volumes/Working/rust/practice/cses/src/bin/weird_algo.rs", stale_mtime: FileTime { seconds: 1789362700, nanos: 410065444 } }))
-   0.011203750s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint: stale: changed "/Volumes/Working/rust/practice/cses/src/bin/weird_algo.rs"
-   0.011210958s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint:           (vs) "/Volumes/Working/rust/practice/cses/target/debug/.fingerprint/cses-32aa662f1384baeb/dep-test-bin-weird_algo"
-   0.011212542s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1789362699, nanos: 499441243 } < FileTime { seconds: 1789362700, nanos: 410065444 }
-   0.011290000s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint: fingerprint dirty for cses v0.1.0 (/Volumes/Working/rust/practice/cses)/Check { test: true }/TargetInner { name: "weird_algo", doc: true, ..: with_path("/Volumes/Working/rust/practice/cses/src/bin/weird_algo.rs", Edition2021) }
-   0.011295917s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="weird_algo"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/Volumes/Working/rust/practice/cses/target/debug/.fingerprint/cses-32aa662f1384baeb/dep-test-bin-weird_algo", reference_mtime: FileTime { seconds: 1789362699, nanos: 499441243 }, stale: "/Volumes/Working/rust/practice/cses/src/bin/weird_algo.rs", stale_mtime: FileTime { seconds: 1789362700, nanos: 410065444 } }))
+   0.013076750s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="increasing_array"}: cargo::core::compiler::fingerprint: fingerprint error for cses v0.1.0 (/Volumes/Working/rust/practice/cses)/Check { test: false }/TargetInner { name: "increasing_array", doc: true, ..: with_path("/Volumes/Working/rust/practice/cses/src/bin/increasing_array.rs", Edition2021) }
+   0.013232708s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="increasing_array"}: cargo::core::compiler::fingerprint:     err: failed to read `/Volumes/Working/rust/practice/cses/target/debug/.fingerprint/cses-03738f2f386b316e/bin-increasing_array`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.030434167s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="increasing_array"}: cargo::core::compiler::fingerprint: fingerprint error for cses v0.1.0 (/Volumes/Working/rust/practice/cses)/Check { test: true }/TargetInner { name: "increasing_array", doc: true, ..: with_path("/Volumes/Working/rust/practice/cses/src/bin/increasing_array.rs", Edition2021) }
+   0.030448458s  INFO prepare_target{force=false package_id=cses v0.1.0 (/Volumes/Working/rust/practice/cses) target="increasing_array"}: cargo::core::compiler::fingerprint:     err: failed to read `/Volumes/Working/rust/practice/cses/target/debug/.fingerprint/cses-8a06d7cc97108f63/test-bin-increasing_array`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
     Checking cses v0.1.0 (/Volumes/Working/rust/practice/cses)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
