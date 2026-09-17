@@ -1,21 +1,12 @@
-use std::io::{self, BufRead, BufReader, Write};
+use std::io::{self};
 
 fn main() {
     let stdin = io::stdin();
-    let stdout = io::stdout();
-    let mut reader = BufReader::new(stdin.lock());
-    let mut writer = io::BufWriter::new(stdout.lock());
+    let mut input = String::new();
+    stdin.read_line(&mut input).unwrap();
+    let mut parts = input.split_whitespace();
+    let n: i32 = parts.next().unwrap().parse().unwrap();
+    let array: Vec<i32> = parts.map(|p| p.parse().unwrap()).collect();
 
-    let mut line = String::new();
-    reader.read_line(&mut line).unwrap();
-    let n: usize = line.trim().parse().unwrap();
-
-    for _ in 0..n {
-        line.clear();
-        reader.read_line(&mut line).unwrap();
-        let x: i64 = line.trim().parse().unwrap();
-        // process x
-    }
-
-    writeln!(writer, "answer").unwrap();
+    print!("{:#?}", &array)
 }
